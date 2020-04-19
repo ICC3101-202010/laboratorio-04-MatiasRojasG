@@ -36,6 +36,11 @@
     <Compile Include="Recepcion.cs" />
     <Compile Include="Objetos.cs" />
     <Compile Include="IFull.cs" />
+    <Compile Include="Almacenamiento.cs" />
+    <Compile Include="IFullManual.cs" />
+    <Compile Include="Ensamblaje.cs" />
+    <Compile Include="Verificacion.cs" />
+    <Compile Include="Empaque.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

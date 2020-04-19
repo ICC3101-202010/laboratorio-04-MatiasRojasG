@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace Lab4POO
 {
-    public class Recepcion : CentralC, IFull, IFullManual
+    public class Verificacion : CentralC, IFull, IFullManual
     {
         private string name;
         private double size;
         int size1;
-        public List<Objetos> objetos = new List<Objetos> {};
+        public List<Objetos> objetos = new List<Objetos> { };
 
-        public Recepcion(string Name,double Size)
+        public Verificacion(string Name, double Size)
         {
             this.name = Name;
             this.size = Size;
@@ -58,7 +58,7 @@ namespace Lab4POO
             {
                 objetos.RemoveAt(0);
             }
-            Console.WriteLine("Limpieza finalizada");
+            Console.WriteLine("Limpieza de " + name + " finalizada");
         }
 
 

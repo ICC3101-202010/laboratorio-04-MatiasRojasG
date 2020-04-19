@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 
 
+
 namespace Lab4POO
 {
-    public class Recepcion : CentralC, IFull, IFullManual
+    public class Almacenamiento : CentralC, IFull, IFullManual
     {
         private string name;
         private double size;
         int size1;
-        public List<Objetos> objetos = new List<Objetos> {};
+        public List<Objetos> objetos = new List<Objetos> { };
 
-        public Recepcion(string Name,double Size)
+        public Almacenamiento(string Name, double Size)
         {
             this.name = Name;
             this.size = Size;
@@ -36,6 +37,8 @@ namespace Lab4POO
         }
 
 
+
+
         public void Full()
         {
             size1 = objetos.Count;
@@ -43,18 +46,16 @@ namespace Lab4POO
             {
                 Console.WriteLine("Alerta: Memoria llena");
             }
-            if (objetos.Count < 10)
+            else
             {
-                Console.WriteLine("Memoria disponible");
-                Console.WriteLine(10 - objetos.Count);
+                Console.WriteLine("Memoria disponible: ");
+                Console.WriteLine(1- objetos.Capacity);
             }
+
         }
-
-
         public void FullManual()
         {
-            size1 = objetos.Count;
-            for (int i = 0; i < size1; i++)
+            for (int i = 0; i < 10; i++)
             {
                 objetos.RemoveAt(0);
             }
